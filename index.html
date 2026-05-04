@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zontron Food Machinery</title>
+    <style>
+        /* 基础设置与平滑滚动 */
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+        html{scroll-behavior: smooth;}
+        body{color:#333;background:#f7f7f7;line-height:1.6}
+        
+        /* 导航栏 */
+        header{background:#0f4c81;color:#fff;padding:16px 20px;position:sticky;top:0;z-index:99;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+        .container{max-width:1200px;margin:0 auto;padding:0 15px}
+        .header-content{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+        .logo{font-size:24px;font-weight:700;letter-spacing:1px}
+        nav{margin-top:8px}
+        nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+        nav a{color:#fff;text-decoration:none;font-weight:500;transition:color 0.3s;}
+        nav a:hover{color:#ffc107;}
+
+        /* 首屏区域 */
+        .hero{background: linear-gradient(135deg, #0f4c81 0%, #1a73e8 100%);color:#fff;text-align:center;padding:80px 20px}
+        .hero h1{font-size:36px;margin-bottom:15px;text-shadow: 1px 1px 3px rgba(0,0,0,0.2);}
+        .hero p{font-size:18px;margin-bottom: 25px;}
+        
+        /* 按钮样式 */
+        .btn {display:inline-block;background:#ffc107;color:#333;padding:12px 28px;text-decoration:none;font-weight:bold;border-radius:30px;transition:all 0.3s ease;box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .btn:hover {background:#ffca2c;transform:translateY(-2px);box-shadow: 0 6px 12px rgba(0,0,0,0.15);}
+
+        /* 通用区块设置 */
+        .section{padding:60px 0}
+        .section-title{text-align:center;font-size:28px;color:#0f4c81;margin-bottom:40px;position:relative;}
+        .section-title::after{content:'';display:block;width:60px;height:3px;background:#ffc107;margin:10px auto 0;}
+        
+        /* 卡片网格布局 */
+        .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:25px;margin-bottom:30px}
+        a.card {text-decoration:none; color:inherit; display:block;} 
+        .card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);transition:transform 0.3s ease, box-shadow 0.3s ease;}
+        .card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.12);}
+        .card img{width:100%;height:220px;object-fit:contain;background:#fff;border-bottom:1px solid #eee;padding:10px;}
+        .card-body{padding:20px}
+        .card h3{color:#0f4c81;margin-bottom:10px;font-size:18px}
+        .card p{font-size:14px;color:#666;}
+        div.card {cursor: default;}
+        .view-btn {color:#1a73e8; font-size:14px; font-weight:bold; margin-top:10px; display:inline-block;}
+
+        /* 联系方式区域 */
+        .contact{background:#0f4c81;color:#fff;text-align:center;padding:50px 0}
+        .contact h2{font-size: 28px; margin-bottom: 15px;}
+        .contact-links{display:flex; justify-content:center; gap:30px; margin-top:25px; flex-wrap:wrap;}
+        .contact-links a{color:#fff; text-decoration:none; font-size:18px; display:flex; align-items:center; gap:8px; transition: color 0.3s;}
+        .contact-links a:hover{color:#ffc107;}
+        
+        /* 页脚 */
+        footer{background:#083863;color:#bbb;text-align:center;padding:20px;font-size:14px;}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">ZONTRON Food Machinery</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#tech">Advantages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Professional Food Processing Machinery Manufacturer</h1>
+        <p>Efficient • Safe • Intelligent • Customized Solutions</p>
+        <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Company Profile</h3>
+                    <p>Zontron Food Machinery is a professional manufacturer integrating R&D, design, production, sales and service. We provide global food processing enterprises with efficient, safe and intelligent automated production line solutions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Core Team</h3>
+                    <p>Our team consists of senior engineers and food technology experts. We maintain long-term industry-university-research cooperation with top domestic universities and scientific research institutions.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Mission & Vision</h3>
+                    <p><strong>Mission:</strong> Empower the food processing industry, improve production efficiency, ensure food safety.</p>
+                    <p style="margin-top:8px;"><strong>Vision:</strong> To become a global leading provider of food processing solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="solutions" class="section" style="background:#eef5ff">
+    <div class="container">
+        <h2 class="section-title">One-Stop Food Processing Solutions</h2>
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+            <div class="card-body" style="text-align: center;">
+                <h3>Potato Products Processing Solutions</h3>
+                <p style="margin-top:10px;">We provide end-to-end solutions for various potato processing needs:</p>
+                <ul style="display:inline-block; text-align:left; margin-top:15px; line-height: 2;">
+                    <li>✔️ Frozen French Fries Production Line</li>
+                    <li>✔️ Fresh-cut Potato Chips Production Line</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="section">
+    <div class="container">
+        <h2 class="section-title">Product Introduction</h2>
+        <div class="grid">
+
+            <a href="detail/frozen-french-fries.html" class="card">
+                <img src="img/Frozen French fries production line.png" alt="Frozen French fries production line">
+                <div class="card-body">
+                    <h3>Frozen French fries production line</h3>
+                    <p>Output 50-5000KG/H optional. Full line from lifting to packaging.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/fresh-cut-potato-chips.html" class="card">
+                <img src="img/Fresh Cut Potato Chips Production Line.png" alt="Fresh Cut Potato Chips Production Line">
+                <div class="card-body">
+                    <h3>Fresh Cut Potato Chips Production Line</h3>
+                    <p>Complete line with cleaning, slicing, frying, packaging.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/continuous-frying-line.html" class="card">
+                <img src="img/Continuous frying production line.png" alt="Continuous frying production line">
+                <div class="card-body">
+                    <h3>Continuous frying production line</h3>
+                    <p>For pasta, meat, nuts, seafood, snacks, etc.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/gas-heated-fryer.html" class="card">
+                <img src="img/Gas heated deep fryer.png" alt="Gas heated deep fryer">
+                <div class="card-body">
+                    <h3>Gas heated deep fryer</h3>
+                    <p>High efficiency, energy-saving, safe.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/electric-heated-fryer.html" class="card">
+                <img src="img/Electric heated deep fryer.jpg" alt="Electric heated deep fryer">
+                <div class="card-body">
+                    <h3>Electric heated deep fryer</h3>
+                    <p>For restaurants, canteens, small factories.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/centrifugal-dehydrator.html" class="card">
+                <img src="img/dehydrator.jpg" alt="Deoiler / dehydrator">
+                <div class="card-body">
+                    <h3>Centrifugal Deoiler / Dehydrator</h3>
+                    <p>Remove water & oil by centrifugal rotation.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/sizing-coating-equipment.html" class="card">
+                <img src="img/Sizing and coating equipment.jpg" alt="Sizing and coating equipment">
+                <div class="card-body">
+                    <h3>Sizing and coating equipment</h3>
+                    <p>For meat, seafood, vegetables, nuts coating.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/mesh-belt-dryer.html" class="card">
+                <img src="img/Mesh belt dryer.png" alt="Mesh belt dryer">
+                <div class="card-body">
+                    <h3>Mesh belt dryer</h3>
+                    <p>For vegetables, herbs, fruits drying.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/industrial-drying-room.html" class="card">
+                <img src="img/Drying Room.jpg" alt="Drying Room/Industrial oven">
+                <div class="card-body">
+                    <h3>Drying Room / Industrial oven</h3>
+                    <p>Multi-stage temperature control, uniform heating.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/sweet-potato-baking-line.html" class="card">
+                <img src="img/Sweet potato baking production line.jpg" alt="Sweet potato baking production line">
+                <div class="card-body">
+                    <h3>Sweet potato baking production line</h3>
+                    <p>Stainless steel, precise temperature control.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/bagged-pasteurization-line.html" class="card">
+                <img src="img/Bagged pasteurization line.jpg" alt="Bagged pasteurization line">
+                <div class="card-body">
+                    <h3>Bagged pasteurization line</h3>
+                    <p>Low-temperature sterilization for food & beverage.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/vegetable-washing-line.html" class="card">
+                <img src="img/Vegetable washing production line.jpg" alt="Vegetable washing production line">
+                <div class="card-body">
+                    <h3>Vegetable washing production line</h3>
+                    <p>For leafy & root vegetables cleaning.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/tray-washing-machine.html" class="card">
+                <img src="img/Turnover washing machine.png" alt="Turnover/tray washing machine">
+                <div class="card-body">
+                    <h3>Turnover / tray washing machine</h3>
+                    <p>304 stainless steel, 360° cleaning nozzles.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/multi-functional-peeler.html" class="card">
+                <img src="img/Multi-functional  peeler.jpg" alt="Multi-functional  peeler">
+                <div class="card-body">
+                    <h3>Multi-functional peeler</h3>
+                    <p>Suitable for cleaning and processing various vegetables.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/bubble-washing-machine.html" class="card">
+                <img src="img/Bubble washing machine.jpg" alt="Bubble washing machine">
+                <div class="card-body">
+                    <h3>Bubble washing machine</h3>
+                    <p>Suitable for leafy vegetables, fruits, and aquatic products.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/skip-car-cleaning-machine.html" class="card">
+                <img src="img/Skip car cleaning  machine.jpg" alt="Skip car cleaning  machine">
+                <div class="card-body">
+                    <h3>Skip car cleaning machine</h3>
+                    <p>Automatically completes washing and rinsing for material carts.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/drum-seasoning-machine.html" class="card">
+                <img src="img/Drum seasoning machine.png" alt="Drum seasoning machine">
+                <div class="card-body">
+                    <h3>Drum seasoning machine</h3>
+                    <p>For food seasoning & powder coating.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/fruit-vegetable-grading.html" class="card">
+                <img src="img/Fruit and Vegetable Grading Machine.png" alt="Fruit and Vegetable Grading Machine">
+                <div class="card-body">
+                    <h3>Fruit and Vegetable Grading Machine</h3>
+                    <p>Suitable for the grading and selection of round fruits.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/parallel-brush-roller.html" class="card">
+                <img src="img/Parallel Brush roller cleaning machine.png" alt="Parallel Brush roller cleaning machine">
+                <div class="card-body">
+                    <h3>Parallel Brush roller cleaning machine</h3>
+                    <p>Suitable for cleaning and peeling oval fruits and vegetables.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/air-cooled-conveyor.html" class="card">
+                <img src="img/Air-cooled conveyor line.png" alt="Air-cooled conveyor line">
+                <div class="card-body">
+                    <h3>Air-cooled conveyor line</h3>
+                    <p>Suitable for water removal after sterilization.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/strips-cutting-machine.html" class="card">
+                <img src="img/Strips cutting machine.jpg" alt="Strips cutting machine">
+                <div class="card-body">
+                    <h3>Strips cutting machine</h3>
+                    <p>High-efficiency cutting equipment.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/microtome.html" class="card">
+                <img src="img/microtome.jpg" alt="microtome">
+                <div class="card-body">
+                    <h3>Microtome</h3>
+                    <p>Precision slicing machine.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/ginger-cutting-machine.html" class="card">
+                <img src="img/Ginger cutting machine.jpg" alt="Ginger cutting machine">
+                <div class="card-body">
+                    <h3>Ginger cutting machine</h3>
+                    <p>Specialized for ginger processing.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/seasoning-machine.html" class="card">
+                <img src="img/Seasoning machine.jpg" alt="Seasoning machine">
+                <div class="card-body">
+                    <h3>Seasoning machine</h3>
+                    <p>Uniform mixing and flavoring.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/multi-function-cutter.html" class="card">
+                <img src="img/Multi-function cutting machine.jpg" alt="Multi-function cutting machine">
+                <div class="card-body">
+                    <h3>Multi-function cutting machine</h3>
+                    <p>Versatile cutting for various ingredients.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/jacketed-pan.html" class="card">
+                <img src="img/Jacketed pan.jpg" alt="Jacketed pan">
+                <div class="card-body">
+                    <h3>Jacketed pan</h3>
+                    <p>Industrial cooking equipment.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/planet-stirring-wok.html" class="card">
+                <img src="img/Planet stirring wok.jpg" alt="Planet stirring wok">
+                <div class="card-body">
+                    <h3>Planet stirring wok</h3>
+                    <p>Automated stirring for large batch cooking.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/small-frying-machine.html" class="card">
+                <img src="img/Small frying machine.jpg" alt="Small frying machine">
+                <div class="card-body">
+                    <h3>Small frying machine</h3>
+                    <p>Ideal for compact processing needs.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/deep-fryer.html" class="card">
+                <img src="img/The  deep  fryer.jpg" alt="The  deep  fryer">
+                <div class="card-body">
+                    <h3>The deep fryer</h3>
+                    <p>Reliable commercial frying equipment.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/manual-visual-inspection.html" class="card">
+                <img src="img/Manual visual inspection of conveyor belt.jpg" alt="Manual visual inspection of conveyor belt">
+                <div class="card-body">
+                    <h3>Manual visual inspection conveyor</h3>
+                    <p>Designed for quality control and sorting.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/vegetable-cutter.html" class="card">
+                <img src="img/Vegetable cutter.jpg" alt="Vegetable cutter">
+                <div class="card-body">
+                    <h3>Vegetable cutter</h3>
+                    <p>Commercial grade vegetable slicing/dicing.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+            <a href="detail/stock-car.html" class="card">
+                <img src="img/Stock car.jpg" alt="Stock car">
+                <div class="card-body">
+                    <h3>Stock car</h3>
+                    <p>Durable material transport solution.</p>
+                    <span class="view-btn">View Details &rarr;</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section id="tech" class="section" style="background:#eef5ff">
+    <div class="container">
+        <h2 class="section-title">Core Technical Advantages</h2>
+        <div class="grid">
+            <div class="card"><div class="card-body"><h3 style="text-align:center;">⚙️ Automation & Intelligence</h3><p style="text-align:center;">PLC Control, HMI touch screen, data traceability.</p></div></div>
+            <div class="card"><div class="card-body"><h3 style="text-align:center;">🛡️ Food-grade Material</h3><p style="text-align:center;">SUS 304 stainless steel, seamless design.</p></div></div>
+            <div class="card"><div class="card-body"><h3 style="text-align:center;">🌱 Energy Saving</h3><p style="text-align:center;">Waste heat recovery, water recycling.</p></div></div>
+            <div class="card"><div class="card-body"><h3 style="text-align:center;">🎯 Precise Control</h3><p style="text-align:center;">PID temperature control, stable process.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title" style="color:#fff;">Contact Us</h2>
+        <p style="font-size: 18px;">We look forward to cooperating with you!</p>
+        <div class="contact-links">
+            <a href="tel:+8617639599402">📞 +86 176 3959 9402</a>
+            <a href="mailto:info@zontron.com">📧 info@zontron.com</a>
+            <a href="https://wa.me/8617639599402" target="_blank">💬 WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Zontron Food Machinery. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
